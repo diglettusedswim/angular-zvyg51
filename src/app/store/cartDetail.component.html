@@ -63,7 +63,8 @@
             Continue Shopping
         </button>
         <button class="btn btn-secondary m-1" routerLink="/checkout"
-                [disabled]="cart.lines.length == 0">
+                [disabled]="cart.lines.length == 0 && connected">
+                {{ connected ? 'Checkout' : 'Offline' }}
           Checkout
         </button>
       </div>
